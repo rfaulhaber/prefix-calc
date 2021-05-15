@@ -1,9 +1,9 @@
-#+TITLE: prefix-quick-calc
+#+TITLE: prefix-calc
 
-Provides =prefix-quick-calc=, which is like =quick-calc= but uses prefix
+Provides =prefix-calc=, which is like =quick-calc= but uses prefix
 notation. Only supports =+=, =-=, =*=, and =/=.
 
-=prefix-quick-calc= converts the expression entered into an s-expression that is
+=prefix-calc= converts the expression entered into an s-expression that is
 then passed to =eval=. So
 
 #+begin_example
@@ -15,3 +15,10 @@ becomes
 #+begin_example
 (+ 1 2 (- 3 4 5))
 #+end_example
+
+Using the prefix argument will insert the result into the existing buffer at
+point.
+
+When highlighting a region that's also a valid prefix-calc expression,
+=prefix-calc-on-region= will replace the current region with the result of the
+expression.
