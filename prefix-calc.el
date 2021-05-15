@@ -57,8 +57,8 @@
                (s-split " " expr)))
          (qs (seq-map
               (lambda (s)
-                (if (member (intern s) prefix-calc-ops)
-                    (intern s)
+                (if (member (intern-soft s) prefix-calc-ops)
+                    (intern-soft s)
                   (string-to-number s)))
               str))
          (forms (seq-map 'reverse
