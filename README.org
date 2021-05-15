@@ -1,0 +1,17 @@
+#+TITLE: prefix-quick-calc
+
+Provides =prefix-quick-calc=, which is like =quick-calc= but uses prefix
+notation. Only supports =+=, =-=, =*=, and =/=.
+
+=prefix-quick-calc= converts the expression entered into an s-expression that is
+then passed to =eval=. So
+
+#+begin_example
++ 1 2 - 3 4 5
+#+end_example
+
+becomes
+
+#+begin_example
+(+ 1 2 (- 3 4 5))
+#+end_example
